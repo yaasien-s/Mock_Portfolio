@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>Mario Kart</title>
+  <link href="style3.css" rel="stylesheet" type="text/css">
+  
+  
+</head>
+<body>
+
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Mario Kart</a>
+    <a href="testimonial.html">Testimonial</a>
+    <a href="contact.html">Contact</a>
+    
+  </div>
+  
+
+
+  <script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+document.getElementById("mySidebar").style.width = "250px";
+document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
+  <div class="sky">
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Open Menu</button>
+     
+    </div>
+
+    <div class="sign">
+      <span class="fast-flicker"><h1>MARIO</h1></span><span class="flicker"><h1> KART</h1></span>
+    </div>
+    
+  </div>
+
+  <div class="road">
+    <div class="lines"></div>
+    <img src="img/mario.png" alt="" class="mario">
+    <img src="img/luigi.png" alt="" class="luigi">
+  </div>
+</body>

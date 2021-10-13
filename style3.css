@@ -1,0 +1,379 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 70%;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190831/pngtree-big-city-night-image_312472.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.road{
+  height: 30%;
+  background: rgb(49, 49, 49);
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+  
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed rgb(255, 251, 0);
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/*// ELEMENTS TO ANIMATE //*/
+
+.mario {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  /* Call the keyframe */
+  animation-name: drive;
+  /* Specify how long you want the animation to last for */
+  animation-duration: 3s;
+  /* It takes the last keyframe element (to) and applies it to the image */
+  animation-fill-mode: forwards;
+  
+  /* It takes the first keyframe element (from) and applies it to the image */
+  /* animation-fill-mode: backwards; */
+  
+  /* It takes the first keyframe element (from) and applies it to the image */
+  /* animation-fill-mode: both; */
+  
+  /* Delays the animation */
+  /* animation-delay: 2s; */
+
+  /* Determines how many times you want the animation to repeat */
+  animation-iteration-count: infinite;
+
+  /* Determines the speed of the animation */
+  animation-timing-function: ease;
+
+  /* can creating your own timing option */
+  /* Here you can create your own speed and different intervals of the animation: https://cubic-bezier.com/ */
+  animation-timing-function:linear;
+}
+
+.luigi {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 3.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  
+  /* Can choose the direction of the animation */
+
+  animation-timing-function:linear;
+}
+
+
+/*// KEYFRAMES //*/
+
+/* Image will move from the right to the left */
+@keyframes drive {
+
+  
+  from { transform: translateX(-100px);} /* Starting point */
+  to { transform: translateX(1700px);} /* Ending point */
+
+}
+
+@keyframes wind {
+  from { left: -300px }
+  to { left: 100% }
+}
+
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(15, 15, 15); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #444;
+  color: rgb(255, 255, 255);
+}
+
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+
+
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffffff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #d34646,
+      -0.2rem 0.1rem 1rem #60b954, 0.2rem 0.1rem 1rem #8f0909,
+      0 -0.5rem 2rem #881a1a, 0 0.5rem 3rem #ff0000;
+  }
+  28%,
+  33% {
+    color: #443d41;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ffffff;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #000000;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #e9e6ff, 0 0 1.5rem #58d34c,
+      -0.2rem 0.1rem 1rem #35a83a, 0.2rem 0.1rem 1rem #23850a,
+      0 -0.5rem 2rem #024200, 0 0.5rem 3rem #15ff00;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.sign{
+  text-align: center;
+  font-size: 30px;
+  overflow: hidden;
+}
