@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: Clip;
     src: url("https://acupoftee.github.io/fonts/Clip.ttf");
@@ -18,7 +20,7 @@
     }
     28%,
     33% {
-      color: #443d41;
+      color: #ffffff;
       text-shadow: none;
     }
     82%,
@@ -174,3 +176,5 @@
       opacity: 1;
     }
   }
+
+  @media screen and (max-height: 450px){}
