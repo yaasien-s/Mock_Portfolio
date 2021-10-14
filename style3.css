@@ -70,11 +70,13 @@ html, body{
   /* can creating your own timing option */
   /* Here you can create your own speed and different intervals of the animation: https://cubic-bezier.com/ */
   animation-timing-function:linear;
+
+  
 }
 
 .luigi {
   position: absolute;
-  top: 80px;
+  top: 25px;
   left: 0;
   animation-name: drive;
   animation-duration: 3.3s;
@@ -92,11 +94,13 @@ html, body{
 /* Image will move from the right to the left */
 @keyframes drive {
 
-  
-  from { transform: translateX(-100px);} /* Starting point */
   to { transform: translateX(1700px);} /* Ending point */
+  from { transform: translateX(-100px);} /* Starting point */
+
 
 }
+
+
 
 @keyframes wind {
   from { left: -300px }
@@ -378,4 +382,3 @@ input[type=submit]:hover {
   overflow: hidden;
 }
 
-@media screen and (max-height: 450px){}

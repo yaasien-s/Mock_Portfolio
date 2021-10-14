@@ -14,9 +14,9 @@
     36%,
     75% {
       color: #ffffff;
-      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #555555,
-        -0.2rem 0.1rem 1rem #474747, 0.2rem 0.1rem 1rem #aaaaaa,
-        0 -0.5rem 2rem #505050, 0 0.5rem 3rem #ffffff;
+      text-shadow: 0 0 0.6rem #dd5cdd, 0 0 1.5rem #ff0000,
+        -0.2rem 0.1rem 1rem #c46a6a, 0.2rem 0.1rem 1rem #7e1414,
+        0 -0.5rem 2rem #884646, 0 0.5rem 3rem #990303;
     }
     28%,
     33% {
@@ -45,9 +45,9 @@
     }
     100% {
       color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #e9e6ff, 0 0 1.5rem #3f3f3f,
-        -0.2rem 0.1rem 1rem #383838, 0.2rem 0.1rem 1rem #585858,
-        0 -0.5rem 2rem #222222, 0 0.5rem 3rem #ffffff;
+      text-shadow: 0 0 0.6rem #5f23ce, 0 0 1.5rem #6200ff,
+        -0.2rem 0.1rem 1rem #4812a0, 0.2rem 0.1rem 1rem #440aa1,
+        0 -0.5rem 2rem #4215aa, 0 0.5rem 3rem #2b0764;
     }
   }
   
