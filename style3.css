@@ -27,16 +27,41 @@ html, body{
   border-top: 10px solid grey;
   border-bottom: 10px solid grey;
   width: 100%;
+
+  background: linear-gradient(-45deg, #660000, #300101, brown, #1a990e, #0f5202);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 25%;
+    }
+    25%{
+        background-position: 25% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75%{
+        background-position: 50% 25%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   
 }
 
 .lines{
   box-sizing: border-box;
-  border: 5px dashed rgb(255, 251, 0);
+  border: 5px dashed gold;
   height: 0px;
   width: 100%;
   position: absolute;
   top: 45%;
+
+  
 }
 
 /*// ELEMENTS TO ANIMATE //*/

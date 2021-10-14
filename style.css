@@ -7,7 +7,7 @@
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: 10px;
     border-style: hidden;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     border-radius: 4%;
   }
    hr{
@@ -51,8 +51,31 @@
   /* Style the back side */
   .flip-card-back {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transform: rotateY(180deg);
+
+    background: linear-gradient(-45deg, #000000, #000000, #333333, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 25%;
+      }
+      25%{
+          background-position: 25% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75%{
+          background-position: 50% 25%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
   }
 
 .container1{
@@ -80,7 +103,7 @@ img{
 
 
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #81402c, #88234a, rgb(75, 1, 75),#125b75, #13755e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
     height: 100vh;
@@ -113,10 +136,33 @@ body {
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: rgb(15, 15, 15); /* Black*/
+   
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+
+    background: linear-gradient(-45deg, #000000, #000000, rgb(71, 71, 71), #333333, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 25%;
+      }
+      25%{
+          background-position: 25% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75%{
+          background-position: 50% 25%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
   }
   
   /* The sidebar links */
@@ -124,14 +170,14 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
   }
   
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
-    color: #f1f1f1;
+    color: #818181;
   }
   
   /* Position and style the close button (top right corner) */
@@ -154,7 +200,7 @@ body {
   }
   
   .openbtn:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(153, 153, 153);
     color: black;
   }
   
@@ -205,6 +251,29 @@ input[type=text], select, textarea {
     padding: 20px;
     margin-left: 350px;
     margin-right: 350px;
+    background: linear-gradient(-45deg, #000000, #000000, rgb(71, 71, 71),#333333, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 25%;
+      }
+      25%{
+          background-position: 25% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75%{
+          background-position: 50% 25%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     
   }
   
@@ -225,6 +294,8 @@ input[type=text], select, textarea {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 150px;
+
+    
     
   }
   
@@ -247,6 +318,7 @@ input[type=text], select, textarea {
     position: relative;
     background-color: inherit;
     width: 50%;
+    
     
   }
   
@@ -284,10 +356,10 @@ input[type=text], select, textarea {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid rgb(0, 0, 0);
+    border: medium solid rgb(34, 34, 34);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent rgb(0, 0, 0);
-    opacity: 0.5;
+    border-color: transparent transparent transparent rgb(34, 34, 34);
+   
   }
   
   /* Add arrows to the right container (pointing left) */
@@ -299,10 +371,10 @@ input[type=text], select, textarea {
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid rgb(0, 0, 0);
+    border: medium solid rgb(34, 34, 34);
     border-width: 10px 10px 10px 0;
-    border-color: transparent rgb(0, 0, 0) transparent transparent;
-    opacity: 0.5;
+    border-color: transparent rgb(34, 34, 34) transparent transparent;
+   
   }
   
   /* Fix the circle for containers on the right side */
@@ -316,8 +388,32 @@ input[type=text], select, textarea {
     background-color: rgb(0, 0, 0);
     position: relative;
     border-radius: 6px;
-    opacity: 0.5;
+   
     color: white;
+    background: linear-gradient(-45deg, #000000, #000000, rgb(71, 71, 71), #333333, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 25%;
+      }
+      25%{
+          background-position: 25% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75%{
+          background-position: 50% 25%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+
+    
   }
 
   .abt{
@@ -329,8 +425,31 @@ input[type=text], select, textarea {
     background-color: rgb(0, 0, 0);
     position: relative;
     border-radius: 6px;
-    opacity: 0.5;
     color: white;
+    background: linear-gradient(-45deg, #000000, #000000, rgb(71, 71, 71),#333333, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 25%;
+    }
+    25%{
+        background-position: 25% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75%{
+        background-position: 50% 25%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+   
+   
   }
 
   
