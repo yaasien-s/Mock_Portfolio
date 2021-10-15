@@ -104,7 +104,7 @@ html, body{
   top: 25px;
   left: 0;
   animation-name: drive;
-  animation-duration: 3.3s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   
@@ -113,6 +113,10 @@ html, body{
   animation-timing-function:linear;
 }
 
+.lui{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
 /*// KEYFRAMES //*/
 
@@ -124,6 +128,8 @@ html, body{
 
 
 }
+
+
 
 
 

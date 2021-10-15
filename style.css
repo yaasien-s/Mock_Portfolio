@@ -297,8 +297,68 @@ input[type=text], select, textarea {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 150px;
+     /* for chrome and safari*/
+     -webkit-animation-duration: 1s;
+     -webkit-animation-name: slidein;
 
-    
+     /*for firefox*/
+     -moz-animation-duration: 1s;
+     -moz-animation-name: slidein;
+
+       /* for opera*/
+     -o-animation-duration: 1s;
+     -o-animation-name: slidein;
+
+       /* Standard syntax*/
+     animation-duration: 1s;
+     animation-name: slidein;
+ }
+
+ @-webkit-keyframes slidein {
+     from {
+         margin-left: 100%;
+         width: 300%;
+     }
+
+     to {
+         margin-left: 0%;
+         width: 100%;
+     }
+ }
+
+ @-moz-keyframes slidein {
+     from {
+         margin-left: 100%;
+         width: 300%;
+     }
+
+     to {
+         margin-left: 0%;
+         width: 100%;
+     }
+ }
+  @-o-keyframes slidein {
+     from {
+         margin-left: 100%;
+         width: 300%;
+     }
+
+     to {
+         margin-left: 0%;
+         width: 100%;
+     }
+ }
+   @keyframes slidein {
+     from {
+         margin-left: 100%;
+         width: 300%;
+     }
+
+     to {
+         margin-left: 0%;
+         width: 100%;
+     }
+
     
   }
   
@@ -307,7 +367,7 @@ input[type=text], select, textarea {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: transparent;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -321,8 +381,7 @@ input[type=text], select, textarea {
     position: relative;
     background-color: inherit;
     width: 50%;
-    
-    
+  
   }
   
   /* The circles on the timeline */
@@ -333,7 +392,7 @@ input[type=text], select, textarea {
     height: 25px;
     right: -17px;
     background-color: transparent;
-    border: 4px solid #000000;
+    border: 4px solid transparent;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -343,6 +402,8 @@ input[type=text], select, textarea {
   /* Place the container to the left */
   .left {
     left: 0;
+
+    
   }
   
   /* Place the container to the right */
@@ -418,6 +479,8 @@ input[type=text], select, textarea {
 
     
   }
+
+  
     
   .abt{
     text-align: center;
@@ -433,6 +496,7 @@ input[type=text], select, textarea {
     background: linear-gradient(-45deg, #000000, #000000, rgb(71, 71, 71),#333333, #000000);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  
  
   
   }
@@ -456,6 +520,7 @@ input[type=text], select, textarea {
    
    
   }
+  
 
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
